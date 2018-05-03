@@ -1,0 +1,48 @@
+<div>
+	<div>
+		<h1></h1>
+	<form ngNativeValidate class="main-form needs-validation ">
+	<div class="form-group">
+		<label>City</label>
+		<input type="text" name="city" [(ngModel)]="city" class="form-control" required>
+		<div class="invalid-feedback">Please enter city</div>
+	</div>
+
+<div class="form-group">
+
+		<label>Country</label>
+		<input type="text" name="country" [(ngModel)]="country" class="form-control">
+</div>
+
+
+<div class="class=form-group">
+
+ <button (click)="save()" class="btn btn-primary">Search</button>
+</div>
+
+</form>
+</div>
+</div>
+
+<div class="main-form">
+	<h1></h1>
+	<div>
+<dl class="row">
+  <dt class="col-sm-3">City:</dt>
+  <dd class="col-sm-9">{{weather.weather.name}}</dd>
+</dl>
+<dl class="row">
+  <dt class="col-sm-3">Temperature:</dt>
+  <dd class="col-sm-9">{{weather.weather.main.temp}}</dd>
+</dl>
+<dl class="row">
+  <dt class="col-sm-3">Weather:</dt>
+  <dd class="col-sm-9">{{weather.weather.weather[0].main}}</dd>
+</dl>
+<dl class="row">
+  <dt class="col-sm-3">Description:</dt>
+  <dd class="col-sm-9">{{weather.weather.weather[0].description}}</dd>
+</dl>
+</div>
+</div>
+
